@@ -55,19 +55,35 @@ h2{
 }
 
 .price{
-  margin:12px 0;
+  margin:10px 0;
   font-size:18px;
   font-weight:600;
+}
+
+.buy{
+  display:inline-block;
+  margin:10px 0 15px;
+  padding:12px 30px;
+  background:white;
+  color:#7b2ff7;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.buy:hover{
+  background:#f6c453;
+  color:black;
 }
 
 .controls{
   display:flex;
   justify-content:space-between;
-  margin-top:15px;
+  margin-top:10px;
 }
 
 button{
-  padding:10px 22px;
+  padding:8px 20px;
   border:none;
   border-radius:25px;
   font-weight:600;
@@ -95,8 +111,10 @@ button:hover{
 <h2>Bridal Sarees</h2>
 
 <div class="slider">
-  <img id="sareeImg" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c">
-  <div class="price" id="price">₹6,499</div>
+  <img id="sareeImg" src="">
+  <div class="price" id="price"></div>
+
+  <div class="buy" onclick="orderNow()">Buy Now</div>
 
   <div class="controls">
     <button onclick="prev()">◀ Prev</button>
@@ -105,7 +123,7 @@ button:hover{
 </div>
 
 <script>
-const images = [
+const sarees = [
   {
     img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c",
     price:"₹6,499"
@@ -127,20 +145,4 @@ const images = [
 let index = 0;
 
 function show(){
-  document.getElementById("sareeImg").src = images[index].img;
-  document.getElementById("price").innerText = images[index].price;
-}
-
-function next(){
-  index = (index + 1) % images.length;
-  show();
-}
-
-function prev(){
-  index = (index - 1 + images.length) % images.length;
-  show();
-}
-</script>
-
-</body>
-</html>
+  document.getElementById("sareeImg").src =
