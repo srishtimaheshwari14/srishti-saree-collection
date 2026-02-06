@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bridal Silk Saree | Srishti’s Saree Collection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#ff5fa2,#7b2ff7);
+      color:white;
+    }
+
+    header{
+      padding:20px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(255,255,255,0.15);
+      backdrop-filter:blur(10px);
+    }
+
+    header h1{
+      font-family:'Playfair Display',serif;
+      font-size:26px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:60px auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      padding:0 30px;
+    }
+
+    img{
+      width:100%;
+      border-radius:20px;
+    }
+
+    h2{
+      font-family:'Playfair Display',serif;
+      font-size:36px;
+      margin-bottom:15px;
+    }
+
+    .price{
+      font-size:22px;
+      margin-bottom:20px;
+      color:#ffe38f;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 35px;
+      background:white;
+      color:#7b2ff7;
+      border-radius:30px;
+      font-weight:600;
+      cursor:pointer;
+      text-decoration:none;
+    }
+
+    .btn:hover{
+      background:#f6c453;
+      color:black;
+    }
+  </style>
+
+  <script>
+    function orderNow(){
+      alert("🛍️ Order placed!\nWe will contact you on WhatsApp.");
+    }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <h1>Srishti’s Saree Collection</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sarees.html">Back to Shop</a>
+  </nav>
+</header>
+
+<div class="container">
+  <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c">
+  <div>
+    <h2>Bridal Silk Saree</h2>
+    <div class="price">₹5,999</div>
+    <p>
+      Premium bridal silk saree with rich embroidery and elegant finish.
+      Perfect for weddings and grand occasions.
+    </p>
+    <br>
+    <div class="btn" onclick="orderNow()">Order on WhatsApp</div>
+  </div>
+</div>
+
+</body>
+</html>
