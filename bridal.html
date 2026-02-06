@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bridal Saree | Srishti’s Saree Collection</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Bridal Sarees</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    body{
-      margin:0;
-      font-family:'Poppins',sans-serif;
-      background:linear-gradient(135deg,#ff5fa2,#7b2ff7);
-      color:white;
-    }
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+}
 
-    header{
-      padding:20px 40px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:rgba(255,255,255,0.15);
-    }
+header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.15);
+}
 
-    header h1{
-      font-family:'Playfair Display',serif;
-      font-size:26px;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:20px;
-      font-weight:500;
-    }
+h2{
+  text-align:center;
+  margin:40px 0;
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+}
 
-    h2{
-      text-align:center;
-      margin:40px 0;
-      font-family:'Playfair Display',serif;
-      font-size:36px;
-    }
+/* slider box */
+.slider{
+  max-width:420px;
+  margin:0 auto 60px;
+  background:rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-      padding:0 40px 60px;
-    }
+.slider img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:15px;
+}
 
-    .grid img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-      border-radius:18px;
-    }
+.price{
+  margin:12px 0;
+  font-size:18px;
+  font-weight:600;
+}
 
-    .price{
-      text-align:center;
-      font-size:20px;
-      font-weight:600;
-      margin-top:20px;
-    }
+.controls{
+  display:flex;
+  justify-content:space-between;
+  margin-top:15px;
+}
 
-    .btn{
-      display:block;
-      width:fit-content;
-      margin:30px auto 60px;
-      padding:14px 40px;
-      background:white;
-      color:#7b2ff7;
-      text-decoration:none;
-      border-radius:30px;
-      font-weight:600;
-    }
-  </style>
+button{
+  padding:10px 22px;
+  border:none;
+  border-radius:25px;
+  font-weight:600;
+  cursor:pointer;
+  background:white;
+  color:#7b2ff7;
+}
+
+button:hover{
+  background:#f6c453;
+  color:black;
+}
+</style>
 </head>
 
 <body>
@@ -82,23 +88,59 @@
 <header>
   <h1>Srishti’s Saree Collection</h1>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="sarees.html">Back</a>
+    <a href="sarees.html">← Back</a>
   </nav>
 </header>
 
-<h2>Bridal Silk Saree</h2>
+<h2>Bridal Sarees</h2>
 
-<div class="grid">
-  <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c">
-  <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c">
-  <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
-  <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3">
+<div class="slider">
+  <img id="sareeImg" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c">
+  <div class="price" id="price">₹6,499</div>
+
+  <div class="controls">
+    <button onclick="prev()">◀ Prev</button>
+    <button onclick="next()">Next ▶</button>
+  </div>
 </div>
 
-<div class="price">Price: ₹5,999</div>
+<script>
+const images = [
+  {
+    img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c",
+    price:"₹6,499"
+  },
+  {
+    img:"https://images.unsplash.com/photo-1600185365483-26d7a4cc7519",
+    price:"₹7,299"
+  },
+  {
+    img:"https://images.unsplash.com/photo-1598514982841-8d94d5bcb98b",
+    price:"₹5,999"
+  },
+  {
+    img:"https://images.unsplash.com/photo-1583391733956-375b2a3f7c04",
+    price:"₹8,499"
+  }
+];
 
-<a class="btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
+let index = 0;
+
+function show(){
+  document.getElementById("sareeImg").src = images[index].img;
+  document.getElementById("price").innerText = images[index].price;
+}
+
+function next(){
+  index = (index + 1) % images.length;
+  show();
+}
+
+function prev(){
+  index = (index - 1 + images.length) % images.length;
+  show();
+}
+</script>
 
 </body>
 </html>
