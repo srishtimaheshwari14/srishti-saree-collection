@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sarees | Srishti’s Saree Collection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:black;
+      color:#d4af37;
+    }
+    header{
+      padding:20px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid rgba(212,175,55,.3);
+    }
+    header h1{
+      font-family:'Playfair Display',serif;
+      font-size:28px;
+    }
+    nav a{
+      color:#d4af37;
+      text-decoration:none;
+      margin-left:25px;
+    }
+    nav a:hover{ text-shadow:0 0 10px gold; }
+
+    h2{
+      text-align:center;
+      margin:40px 0;
+      font-family:'Playfair Display',serif;
+      font-size:36px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+      padding:0 50px 80px;
+    }
+
+    .card{
+      border:1px solid rgba(212,175,55,.3);
+      padding:20px;
+      text-align:center;
+    }
+
+    .card img{
+      width:100%;
+      height:350px;
+      object-fit:cover;
+      margin-bottom:15px;
+    }
+
+    .card h3{
+      font-family:'Playfair Display',serif;
+      margin:10px 0;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 25px;
+      border:1px solid gold;
+      color:gold;
+      text-decoration:none;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      background:gold;
+      color:black;
+    }
+  </style>
+
+  <script>
+    function orderNow(){
+      alert("🛍️ Order received!\nOur team will contact you on WhatsApp soon.");
+    }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <h1>Srishti’s Saree Collection</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sarees.html">Sarees</a>
+  </nav>
+</header>
+
+<h2>Our Saree Collection</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1598954989381-8b4e2c5c1b9f">
+    <h3>Bridal Silk Saree</h3>
+    <p>₹5,999</p>
+    <div class="btn" onclick="orderNow()">Buy Now</div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1622445275992-e7a7b4b0a6c7">
+    <h3>Banarasi Saree</h3>
+    <p>₹4,499</p>
+    <div class="btn" onclick="orderNow()">Buy Now</div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e1">
+    <h3>Designer Saree</h3>
+    <p>₹3,999</p>
+    <div class="btn" onclick="orderNow()">Buy Now</div>
+  </div>
+
+</div>
+
+</body>
+</html>
