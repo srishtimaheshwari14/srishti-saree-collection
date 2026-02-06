@@ -145,4 +145,26 @@ const sarees = [
 let index = 0;
 
 function show(){
-  document.getElementById("sareeImg").src =
+  document.getElementById("sareeImg").src = sarees[index].img;
+  document.getElementById("price").innerText = sarees[index].price;
+}
+
+function next(){
+  index = (index + 1) % sarees.length;
+  show();
+}
+
+function prev(){
+  index = (index - 1 + sarees.length) % sarees.length;
+  show();
+}
+
+function orderNow(){
+  alert("🛍️ Order placed!\nOur team will contact you on WhatsApp soon 💖");
+}
+
+show();
+</script>
+
+</body>
+</html>
