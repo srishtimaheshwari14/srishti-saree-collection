@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Banarasi Sarees</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+}
+
+header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.15);
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+
+h2{
+  text-align:center;
+  margin:40px 0;
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+}
+
+.slider{
+  max-width:420px;
+  margin:0 auto 60px;
+  background:rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
+
+.slider img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.price{
+  margin:10px 0;
+  font-size:18px;
+  font-weight:600;
+}
+
+.buy{
+  display:inline-block;
+  margin:10px 0 15px;
+  padding:12px 30px;
+  background:white;
+  color:#7b2ff7;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.buy:hover{
+  background:#f6c453;
+  color:black;
+}
+
+.controls{
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+button{
+  padding:8px 20px;
+  border:none;
+  border-radius:25px;
+  font-weight:600;
+  cursor:pointer;
+  background:white;
+  color:#7b2ff7;
+}
+button:hover{
+  background:#f6c453;
+  color:black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Srishti’s Saree Collection</h1>
+  <nav>
+    <a href="sarees.html">← Back</a>
+  </nav>
+</header>
+
+<h2>Banarasi Sarees</h2>
+
+<div class="slider">
+  <img id="img">
+  <div class="price" id="price"></div>
+
+  <div class="buy" onclick="orderNow()">Buy Now</div>
+
+  <div class="controls">
+    <button onclick="prev()">◀ Prev</button>
+    <button onclick="next()">Next ▶</button>
+  </div>
+</div>
+
+<script>
+const data = [
+  {img:"https://images.unsplash.com/photo-1598514982841-8d94d5bcb98b", price:"₹4,499"},
+  {img:"https://images.unsplash.com/photo-1600185365483-26d7a4cc7519", price:"₹5,299"},
+  {img:"https://images.unsplash.com/photo-1583391733956-375b2a3f7c04", price:"₹6,199"},
+  {img:"https://images.unsplash.com/photo-1610030469983-98e550d6193c", price:"₹5,999"}
+];
+
+let i = 0;
+function show(){
+  img.src = data[i].img;
+  price.innerText = data[i].price;
+}
+function next(){ i=(i+1)%data.length; show(); }
+function prev(){ i=(i-1+data.length)%data.length; show(); }
+
+function orderNow(){
+  alert("🛍️ Order received!\nWe’ll contact you on WhatsApp 💖");
+}
+
+show();
+</script>
+
+</body>
+</html>
