@@ -1,1 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff5fa2, #7b2ff7);
+  color: white;
+}
+
+header {
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f6c453;
+}
+
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255,95,162,0.35), rgba(123,47,247,0.35)),
+    url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb')
+    center/cover no-repeat;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #f5f0ff;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 30px;
+  background: white;
+  color: #7b2ff7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f6c453;
+  color: black;
+}
+
+section {
+  padding: 80px 60px;
+}
+
+section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.2);
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #f5f0ff;
+  font-size: 15px;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #f5f0ff;
+}
+
+.contact-text {
+  text-align: center;
+  color: #f5f0ff;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 14px;
+}
 
