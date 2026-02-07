@@ -5,141 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Srishti’s Saree Collection</title>
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ff5fa2, #7b2ff7);
-      color: #ffffff;
-    }
-
-    header {
-      padding: 25px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 30px;
-      letter-spacing: 1.5px;
-      color: white;
-    }
-
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #f6c453;
-    }
-
-   .hero {
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background:
-    linear-gradient(
-      rgba(255,95,162,0.35),
-      rgba(123,47,247,0.35)
-    ),
-    url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
-    center/cover no-repeat;
-}
-
-
-    .hero h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: white;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #f5f0ff;
-    }
-
-    .btn {
-      padding: 12px 32px;
-      border-radius: 30px;
-      background: white;
-      color: #7b2ff7;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #f6c453;
-      color: black;
-    }
-
-    section {
-      padding: 80px 60px;
-    }
-
-    section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      text-align: center;
-      margin-bottom: 40px;
-      color: white;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.2);
-      padding: 30px;
-      text-align: center;
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    .card h4 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 10px;
-      color: white;
-    }
-
-    .card p {
-      color: #f5f0ff;
-      font-size: 15px;
-    }
-
-    footer {
-      padding: 30px;
-      text-align: center;
-      background: rgba(255,255,255,0.15);
-      border-top: 1px solid rgba(255,255,255,0.3);
-      font-size: 14px;
-      color: white;
-    }
-  </style>
+  <!-- CSS file -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -186,7 +56,7 @@
 
 <section id="about">
   <h3>About Us</h3>
-  <p style="max-width:800px; margin:auto; text-align:center; color:#f5f0ff;">
+  <p class="about-text">
     Srishti’s Saree Collection is a modern boutique brand celebrating
     Indian femininity with a colorful and contemporary touch.
   </p>
@@ -194,7 +64,7 @@
 
 <section id="contact">
   <h3>Contact & Orders</h3>
-  <div style="text-align:center; color:#f5f0ff;">
+  <div class="contact-text">
     <p>📞 WhatsApp Orders: +91 XXXXX XXXXX</p>
     <p>📸 Instagram: @srishtissareecollection</p>
   </div>
@@ -203,6 +73,9 @@
 <footer>
   © 2026 Srishti’s Saree Collection | Designed with Love 💗
 </footer>
+
+<!-- JS file -->
+<script src="script.js"></script>
 
 </body>
 </html>
