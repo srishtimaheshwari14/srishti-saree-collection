@@ -1,1 +1,0 @@
-# srishti-saree-collection
