@@ -336,3 +336,44 @@ footer {
   margin-bottom:25px;
 }
 
+/* ===============================
+   DESIGNER SAREES PAGE
+================================ */
+
+.designer-page{
+  background:linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+  font-family:'Poppins',sans-serif;
+}
+
+.simple-header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.simple-header a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.designer-grid{
+  padding:50px;
+  gap:30px;
+}
+
+.designer-grid .card{
+  background:rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
+
+.designer-grid .card img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  border-radius:15px;
+}
