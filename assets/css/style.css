@@ -294,3 +294,45 @@ footer {
   color:black;
 }
 
+/* ===============================
+   PRODUCT PAGE
+================================ */
+
+.product-page{
+  background: linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+  font-family:'Poppins',sans-serif;
+}
+
+.product-container{
+  max-width:1100px;
+  margin:60px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  padding:0 30px;
+}
+
+.product-container img{
+  width:100%;
+  border-radius:20px;
+}
+
+.product-details h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.product-details .price{
+  font-size:22px;
+  margin-bottom:20px;
+  color:#ffe38f;
+}
+
+.product-details p{
+  line-height:1.6;
+  color:#f5f0ff;
+  margin-bottom:25px;
+}
+
