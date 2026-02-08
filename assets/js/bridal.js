@@ -1,41 +1,41 @@
-const sarees = [
+const bridalData = [
   {
-    img:"https://images.unsplash.com/photo-1678705730064-a7ecbab4b3fb",
-    price:"₹8,499"
+    img: "https://images.unsplash.com/photo-1678705730064-a7ecbab4b3fb",
+    price: 8499
   },
   {
-    img:"https://images.unsplash.com/photo-1692992193981-d3d92fabd9cb",
-    price:"₹7,299"
+    img: "https://images.unsplash.com/photo-1692992193981-d3d92fabd9cb",
+    price: 7299
   },
   {
-    img:"https://plus.unsplash.com/premium_photo-1724762182780-000d248f9301",
-    price:"₹5,999"
+    img: "https://plus.unsplash.com/premium_photo-1724762182780-000d248f9301",
+    price: 5999
   },
   {
-    img:"https://images.unsplash.com/photo-1609748340878-c690e3e4706b",
-    price:"₹3,499"
+    img: "https://images.unsplash.com/photo-1609748340878-c690e3e4706b",
+    price: 3499
   }
 ];
 
-let index = 0;
+let bridalIndex = 0;
 
-function show(){
-  document.getElementById("sareeImg").src = sarees[index].img;
-  document.getElementById("price").innerText = sarees[index].price;
+function showBridal(){
+  document.getElementById("bridalImg").src = bridalData[bridalIndex].img;
+  document.getElementById("bridalPrice").innerText = "₹" + bridalData[bridalIndex].price;
 }
 
-function next(){
-  index = (index + 1) % sarees.length;
-  show();
+function bridalNext(){
+  bridalIndex = (bridalIndex + 1) % bridalData.length;
+  showBridal();
 }
 
-function prev(){
-  index = (index - 1 + sarees.length) % sarees.length;
-  show();
+function bridalPrev(){
+  bridalIndex = (bridalIndex - 1 + bridalData.length) % bridalData.length;
+  showBridal();
 }
 
-function orderNow(){
-  alert("🛍️ Order placed!\nOur team will contact you on WhatsApp 💖");
+function addBridalToCart(){
+  addToCart("Bridal Saree", bridalData[bridalIndex].price);
 }
 
-show();
+showBridal();
