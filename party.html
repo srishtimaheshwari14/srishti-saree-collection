@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Party Wear Sarees</title>
+  <title>Party Wear Sarees | Srishti’s Saree Collection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Font -->
@@ -16,7 +16,10 @@
 
 <header class="page-header">
   <h2>Party Wear Sarees</h2>
-  <a href="sarees.html" class="back-link">← Back</a>
+  <nav>
+    <a href="sarees.html" class="back-link">← Back</a>
+    <a href="cart.html">🛒 Cart</a>
+  </nav>
 </header>
 
 <section class="product-grid">
@@ -24,17 +27,22 @@
   <div class="product-card">
     <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Party Saree">
     <p class="price">₹3,499</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Party%20Wear%20Saree">Buy Now</a>
+    <div class="btn" onclick="addToCart('Party Wear Saree', 3499)">
+      Add to Cart
+    </div>
   </div>
 
   <div class="product-card">
     <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c" alt="Party Saree">
     <p class="price">₹3,999</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Party%20Wear%20Saree">Buy Now</a>
+    <div class="btn" onclick="addToCart('Party Wear Saree', 3999)">
+      Add to Cart
+    </div>
   </div>
 
 </section>
 
-<script src="assets/js/main.js"></script>
+<!-- CART JS -->
+<script src="assets/js/cart.js"></script>
 </body>
 </html>
