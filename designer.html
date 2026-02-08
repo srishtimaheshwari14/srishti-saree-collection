@@ -16,7 +16,10 @@
 
 <header class="simple-header">
   <h2>Designer Sarees</h2>
-  <a href="sarees.html">← Back</a>
+  <nav>
+    <a href="sarees.html">← Back</a>
+    <a href="cart.html">🛒 Cart</a>
+  </nav>
 </header>
 
 <section class="grid designer-grid">
@@ -24,21 +27,22 @@
   <div class="card">
     <img src="https://images.unsplash.com/photo-1598514982841-8d94d5bcb98b" alt="Designer Saree">
     <p class="price">₹4,999</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Designer%20Saree">
-      Buy Now
-    </a>
+    <div class="btn" onclick="addToCart('Designer Saree', 4999)">
+      Add to Cart
+    </div>
   </div>
 
   <div class="card">
     <img src="https://images.unsplash.com/photo-1583391733956-375b2a3f7c04" alt="Designer Saree">
     <p class="price">₹5,499</p>
-    <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Designer%20Saree">
-      Buy Now
-    </a>
+    <div class="btn" onclick="addToCart('Designer Saree', 5499)">
+      Add to Cart
+    </div>
   </div>
 
 </section>
 
-<script src="assets/js/main.js"></script>
+<!-- CART JS -->
+<script src="assets/js/cart.js"></script>
 </body>
 </html>
