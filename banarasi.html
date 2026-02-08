@@ -7,7 +7,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- MAIN CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -17,6 +16,7 @@
   <h1>Srishti’s Saree Collection</h1>
   <nav>
     <a href="sarees.html">← Back</a>
+    <a href="cart.html">🛒 Cart</a>
   </nav>
 </header>
 
@@ -26,7 +26,7 @@
   <img id="banarasiImg">
   <div class="price" id="banarasiPrice"></div>
 
-  <div class="buy" onclick="orderBanarasi()">Buy Now</div>
+  <div class="buy" onclick="addBanarasiToCart()">Add to Cart</div>
 
   <div class="controls">
     <button onclick="banarasiPrev()">◀ Prev</button>
@@ -34,7 +34,8 @@
   </div>
 </div>
 
-<!-- JS FILE -->
+<!-- JS FILES -->
+<script src="assets/js/cart.js"></script>
 <script src="assets/js/banarasi.js"></script>
 
 </body>
