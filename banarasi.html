@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Banarasi Sarees</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Banarasi Sarees | Srishti’s Saree Collection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/style.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <header class="main-header">
   <h1>Srishti’s Saree Collection</h1>
   <nav>
@@ -21,24 +24,82 @@
   </nav>
 </header>
 
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-hero">
+  <h2>Banarasi Sarees</h2>
+  <p>Timeless weaves • Royal elegance • Handcrafted luxury</p>
+</section>
 
-<h2>Banarasi Sarees</h2>
+<!-- ===== SAREE GRID ===== -->
+<section class="saree-section">
 
-<div class="slider">
-  <img id="banarasiImg">
-  <div class="price" id="banarasiPrice"></div>
+  <div class="saree-grid">
 
-  <div class="buy" onclick="addBanarasiToCart()">Add to Cart</div>
+    <!-- Saree 1 -->
+    <div class="saree-card">
+      <img src="assets/images/banarasi/saree1.jpg" alt="Red Banarasi Saree">
+      <h3>Red Banarasi Silk</h3>
+      <span class="price">₹4,999</span>
+      <button class="order-btn" data-name="Red Banarasi Silk" data-price="4999">
+        Add to Cart
+      </button>
+    </div>
 
-  <div class="controls">
-    <button onclick="banarasiPrev()">◀ Prev</button>
-    <button onclick="banarasiNext()">Next ▶</button>
+    <!-- Saree 2 -->
+    <div class="saree-card">
+      <img src="assets/images/banarasi/saree2.jpg" alt="Royal Blue Banarasi Saree">
+      <h3>Royal Blue Banarasi</h3>
+      <span class="price">₹5,499</span>
+      <button class="order-btn" data-name="Royal Blue Banarasi" data-price="5499">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Saree 3 -->
+    <div class="saree-card">
+      <img src="assets/images/banarasi/saree3.jpg" alt="Golden Banarasi Saree">
+      <h3>Golden Banarasi Silk</h3>
+      <span class="price">₹6,299</span>
+      <button class="order-btn" data-name="Golden Banarasi Silk" data-price="6299">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Saree 4 -->
+    <div class="saree-card">
+      <img src="assets/images/banarasi/saree4.jpg" alt="Pink Banarasi Saree">
+      <h3>Pink Banarasi Silk</h3>
+      <span class="price">₹4,799</span>
+      <button class="order-btn" data-name="Pink Banarasi Silk" data-price="4799">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Saree 5 -->
+    <div class="saree-card">
+      <img src="assets/images/banarasi/saree5.jpg" alt="Green Banarasi Saree">
+      <h3>Emerald Green Banarasi</h3>
+      <span class="price">₹5,899</span>
+      <button class="order-btn" data-name="Emerald Green Banarasi" data-price="5899">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Saree 6 -->
+    <div class="saree-card">
+      <img src="assets/images/banarasi/saree6.jpg" alt="Maroon Banarasi Saree">
+      <h3>Maroon Banarasi Silk</h3>
+      <span class="price">₹6,499</span>
+      <button class="order-btn" data-name="Maroon Banarasi Silk" data-price="6499">
+        Add to Cart
+      </button>
+    </div>
+
   </div>
-</div>
+</section>
 
-<!-- JS FILES -->
-<script src="assets/js/cart.js"></script>
-<script src="assets/js/banarasi.js"></script>
+<!-- JS FILE (external only) -->
+<script src="assets/js/whatsapp-order.js"></script>
 
 </body>
 </html>
