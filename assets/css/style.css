@@ -724,3 +724,130 @@ body {
     font-size: 34px;
   }
 }
+
+
+/* ===============================
+   FINAL LUXURY OVERRIDE – DO NOT TOUCH ABOVE
+   Pink • Purple • Gold ONLY
+================================ */
+
+:root {
+  --pink: #ff5fa2;
+  --purple: #7b2ff7;
+  --gold: #f6c453;
+  --glass: rgba(255,255,255,0.18);
+}
+
+/* FORCE BACKGROUND EVERYWHERE */
+body,
+.party-page,
+.sarees-page,
+.designer-page,
+.bridal-page {
+  background: linear-gradient(135deg, var(--pink), var(--purple)) !important;
+  color: white !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* PAGE HEADING */
+.page-heading {
+  text-align: center;
+  padding: 90px 20px 60px;
+}
+
+.page-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  color: var(--gold) !important;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.page-heading p {
+  font-size: 16px;
+  color: #f5e9ff !important;
+  letter-spacing: 1.2px;
+}
+
+/* LUXURY GRID */
+.luxury-grid {
+  padding: 80px 70px 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 45px;
+}
+
+/* LUXURY CARD */
+.luxury-card {
+  background: var(--glass) !important;
+  border-radius: 26px;
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: 0.45s ease;
+}
+
+.luxury-card:hover {
+  transform: translateY(-14px) scale(1.04);
+  box-shadow: 0 35px 80px rgba(0,0,0,0.55);
+}
+
+/* IMAGE */
+.luxury-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.luxury-content {
+  padding: 26px;
+  text-align: center;
+}
+
+.luxury-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin-bottom: 8px;
+  color: white !important;
+}
+
+.luxury-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold) !important;
+  margin-bottom: 18px;
+}
+
+/* BUTTON */
+.luxury-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(135deg, var(--pink), var(--purple)) !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 35px;
+  text-decoration: none;
+  transition: 0.35s;
+}
+
+.luxury-btn:hover {
+  background: linear-gradient(135deg, var(--gold), var(--pink)) !important;
+  color: black !important;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .luxury-grid {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-heading h2 {
+    font-size: 34px;
+  }
+}
+
