@@ -10,9 +10,15 @@ function saveCart(cart) {
 // ===== ADD TO CART =====
 function addToCart(name, price) {
   let cart = getCart();
-  cart.push({ name, price });
+
+  cart.push({
+    name: name,
+    price: Number(price)
+  });
+
   saveCart(cart);
-  alert("🛒 Item added to cart");
+
+  alert("🛒 Item added to cart successfully!");
 }
 
 // ===== LOAD CART (cart.html) =====
@@ -20,8 +26,10 @@ function loadCart() {
   let cart = getCart();
   let list = document.getElementById("cart-items");
   let totalBox = document.getElementById("total");
-  let total = 0;
 
+  if (!list || !totalBox) return;
+
+  let total = 0;
   list.innerHTML = "";
 
   if (cart.length === 0) {
@@ -31,7 +39,8 @@ function loadCart() {
   }
 
   cart.forEach((item, index) => {
-    total += item.price;
+    total += Number(item.price);
+
     list.innerHTML += `
       <div class="cart-item">
         <p>${index + 1}. ${item.name} – ₹${item.price}</p>
@@ -65,7 +74,7 @@ function orderOnWhatsApp() {
 
   cart.forEach((item, i) => {
     msg += `${i + 1}. ${item.name} - ₹${item.price}%0A`;
-    total += item.price;
+    total += Number(item.price);
   });
 
   msg += `%0A*Total: ₹${total}*`;
@@ -80,12 +89,13 @@ function orderOnWhatsApp() {
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".order-btn");
 
+  if (buttons.length === 0) return;
+
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      const name = btn.getAttribute("data-name");
-      const price = parseInt(btn.getAttribute("data-price"));
+      const name = btn.dataset.name;
+      const price = btn.dataset.price;
       addToCart(name, price);
     });
   });
 });
-
