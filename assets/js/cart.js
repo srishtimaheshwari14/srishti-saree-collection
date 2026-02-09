@@ -75,3 +75,17 @@ function orderOnWhatsApp() {
     "_blank"
   );
 }
+
+// ===== AUTO BIND ADD TO CART BUTTONS =====
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".order-btn");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const name = btn.getAttribute("data-name");
+      const price = parseInt(btn.getAttribute("data-price"));
+      addToCart(name, price);
+    });
+  });
+});
+
