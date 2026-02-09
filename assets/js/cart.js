@@ -1,3 +1,4 @@
+// ===== CART STORAGE =====
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
@@ -6,6 +7,7 @@ function saveCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+// ===== ADD TO CART =====
 function addToCart(name, price) {
   let cart = getCart();
   cart.push({ name, price });
@@ -13,16 +15,18 @@ function addToCart(name, price) {
   alert("🛒 Item added to cart");
 }
 
+// ===== LOAD CART (cart.html) =====
 function loadCart() {
   let cart = getCart();
   let list = document.getElementById("cart-items");
+  let totalBox = document.getElementById("total");
   let total = 0;
 
   list.innerHTML = "";
 
   if (cart.length === 0) {
     list.innerHTML = "<p>Your cart is empty 🛒</p>";
-    document.getElementById("total").innerText = 0;
+    totalBox.innerText = "₹0";
     return;
   }
 
@@ -36,9 +40,10 @@ function loadCart() {
     `;
   });
 
-  document.getElementById("total").innerText = total;
+  totalBox.innerText = "₹" + total;
 }
 
+// ===== REMOVE ITEM =====
 function removeItem(index) {
   let cart = getCart();
   cart.splice(index, 1);
@@ -46,6 +51,7 @@ function removeItem(index) {
   loadCart();
 }
 
+// ===== ORDER ON WHATSAPP =====
 function orderOnWhatsApp() {
   let cart = getCart();
 
@@ -54,7 +60,7 @@ function orderOnWhatsApp() {
     return;
   }
 
-  let msg = "🛍️ *Order Details* %0A%0A";
+  let msg = "🛍️ *Order Details*%0A%0A";
   let total = 0;
 
   cart.forEach((item, i) => {
@@ -65,7 +71,7 @@ function orderOnWhatsApp() {
   msg += `%0A*Total: ₹${total}*`;
 
   window.open(
-    "https://wa.me/91XXXXXXXXXX?text=" + msg,
+    "https://wa.me/919109965678?text=" + msg,
     "_blank"
   );
 }
