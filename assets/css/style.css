@@ -1,0 +1,853 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff5fa2, #7b2ff7);
+  color: white;
+}
+
+header {
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f6c453;
+}
+
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255,95,162,0.35), rgba(123,47,247,0.35)),
+    url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb')
+    center/cover no-repeat;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #f5f0ff;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 30px;
+  background: white;
+  color: #7b2ff7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f6c453;
+  color: black;
+}
+
+section {
+  padding: 80px 60px;
+}
+
+section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.2);
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #f5f0ff;
+  font-size: 15px;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #f5f0ff;
+}
+
+.contact-text {
+  text-align: center;
+  color: #f5f0ff;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 14px;
+}
+
+/* ===============================
+   PARTY WEAR PAGE
+================================ */
+
+.party-page {
+  background: linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.back-link{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  padding:50px;
+}
+
+.product-card{
+  background:rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  backdrop-filter: blur(10px);
+}
+
+.product-card img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.price{
+  margin:15px 0 10px;
+  font-weight:600;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  background:white;
+  color:#7b2ff7;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ===============================
+   SAREES PAGE
+================================ */
+
+.sarees-page{
+  background: linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+  font-family:'Poppins',sans-serif;
+}
+
+.main-header{
+  padding:22px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+.main-header h1{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+}
+
+.main-header nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+
+.main-header nav a:hover{
+  color:#f6c453;
+}
+
+.page-title{
+  text-align:center;
+  margin:50px 0 40px;
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+}
+
+.saree-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  padding:0 60px 90px;
+}
+
+.saree-card{
+  background:rgba(255,255,255,0.22);
+  border-radius:22px;
+  padding:20px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.saree-card:hover{
+  transform:translateY(-10px);
+}
+
+.saree-card img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:15px;
+}
+
+.saree-card h3{
+  font-family:'Playfair Display',serif;
+  margin:10px 0 5px;
+}
+
+.price{
+  font-weight:600;
+  margin:8px 0 10px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  background:white;
+  color:#7b2ff7;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#f6c453;
+  color:black;
+}
+
+/* ===============================
+   PRODUCT PAGE
+================================ */
+
+.product-page{
+  background: linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+  font-family:'Poppins',sans-serif;
+}
+
+.product-container{
+  max-width:1100px;
+  margin:60px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  padding:0 30px;
+}
+
+.product-container img{
+  width:100%;
+  border-radius:20px;
+}
+
+.product-details h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.product-details .price{
+  font-size:22px;
+  margin-bottom:20px;
+  color:#ffe38f;
+}
+
+.product-details p{
+  line-height:1.6;
+  color:#f5f0ff;
+  margin-bottom:25px;
+}
+
+/* ===============================
+   DESIGNER SAREES PAGE
+================================ */
+
+.designer-page{
+  background:linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+  font-family:'Poppins',sans-serif;
+}
+
+.simple-header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.simple-header a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.designer-grid{
+  padding:50px;
+  gap:30px;
+}
+
+.designer-grid .card{
+  background:rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
+
+.designer-grid .card img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+/* ===============================
+   BRIDAL SAREES SLIDER PAGE
+================================ */
+
+.bridal-page{
+  background:linear-gradient(135deg,#ff5fa2,#7b2ff7);
+  color:white;
+  font-family:'Poppins',sans-serif;
+}
+
+.main-header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.15);
+}
+
+.main-header a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.page-title{
+  text-align:center;
+  margin:40px 0;
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+}
+
+.slider{
+  max-width:420px;
+  margin:0 auto 60px;
+  background:rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
+
+.slider img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.price{
+  margin:10px 0;
+  font-size:18px;
+  font-weight:600;
+}
+
+.buy{
+  display:inline-block;
+  margin:10px 0 15px;
+  padding:12px 30px;
+  background:white;
+  color:#7b2ff7;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.buy:hover{
+  background:#f6c453;
+  color:black;
+}
+
+.controls{
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+.controls button{
+  padding:8px 20px;
+  border:none;
+  border-radius:25px;
+  font-weight:600;
+  cursor:pointer;
+  background:white;
+  color:#7b2ff7;
+}
+
+.controls button:hover{
+  background:#f6c453;
+  color:black;
+}
+
+
+/* ===== Banarasi Sarees Slider ===== */
+
+.slider{
+  max-width:420px;
+  margin:0 auto 60px;
+  background:rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+}
+
+.slider img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.price{
+  margin:10px 0;
+  font-size:18px;
+  font-weight:600;
+}
+
+.buy{
+  display:inline-block;
+  margin:10px 0 15px;
+  padding:12px 30px;
+  background:white;
+  color:#7b2ff7;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.buy:hover{
+  background:#f6c453;
+  color:black;
+}
+
+.controls{
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+.controls button{
+  padding:8px 20px;
+  border:none;
+  border-radius:25px;
+  font-weight:600;
+  cursor:pointer;
+  background:white;
+  color:#7b2ff7;
+}
+
+.controls button:hover{
+  background:#f6c453;
+  color:black;
+}
+
+/* ===============================
+   LUXURY COLLECTIONS FIX
+================================ */
+
+.collections {
+  padding: 100px 70px;
+  background: linear-gradient(135deg, #16061f, #4b145f);
+}
+
+/* Section heading */
+.collections h3 {
+  font-size: 44px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Remove underline from cards */
+.collection-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* Grid spacing */
+.collections .grid {
+  gap: 45px;
+}
+
+/* Card redesign */
+.collections .card {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  padding: 45px 30px;
+  text-align: center;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.25);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s ease;
+}
+
+/* Gold accent */
+.collections .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 40%;
+  height: 3px;
+  background: linear-gradient(90deg, #f6c453, #ffe39a);
+}
+
+/* Hover animation */
+.collections .card:hover {
+  transform: translateY(-16px) scale(1.05);
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+}
+
+/* Card title */
+.collections .card h4 {
+  font-size: 25px;
+  margin-bottom: 14px;
+  font-family: 'Playfair Display', serif;
+  color: #ffe39a;
+}
+
+/* Card text */
+.collections .card p {
+  font-size: 16px;
+  color: #f3e9ff;
+  line-height: 1.6;
+}
+
+/* Glow on hover */
+.collections .card:hover h4 {
+  text-shadow: 0 0 15px rgba(255,227,154,0.85);
+}
+
+/* ===============================
+   UNIVERSAL LUXURY SAREE GRID
+   (Banarasi / Bridal / Designer / Party)
+================================ */
+
+body {
+  background: #faf7f2;
+  color: #2b2b2b;
+}
+
+/* Page heading */
+.page-heading {
+  text-align: center;
+  padding: 70px 20px 50px;
+}
+
+.page-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  color: #7b1e3a;
+  margin-bottom: 10px;
+}
+
+.page-heading p {
+  font-size: 16px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* Grid */
+.luxury-grid {
+  padding: 80px 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+/* Card */
+.luxury-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+}
+
+.luxury-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+}
+
+/* Image */
+.luxury-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* Content */
+.luxury-content {
+  padding: 22px;
+  text-align: center;
+}
+
+.luxury-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #2b2b2b;
+}
+
+.luxury-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7b1e3a;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.luxury-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(to right, #7b1e3a, #a8325c);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.luxury-btn:hover {
+  background: linear-gradient(to right, #a8325c, #7b1e3a);
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .luxury-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .luxury-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading h2 {
+    font-size: 34px;
+  }
+}
+
+
+/* ===============================
+   FINAL LUXURY OVERRIDE – DO NOT TOUCH ABOVE
+   Pink • Purple • Gold ONLY
+================================ */
+
+:root {
+  --pink: #ff5fa2;
+  --purple: #7b2ff7;
+  --gold: #f6c453;
+  --glass: rgba(255,255,255,0.18);
+}
+
+/* FORCE BACKGROUND EVERYWHERE */
+body,
+.party-page,
+.sarees-page,
+.designer-page,
+.bridal-page {
+  background: linear-gradient(135deg, var(--pink), var(--purple)) !important;
+  color: white !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* PAGE HEADING */
+.page-heading {
+  text-align: center;
+  padding: 90px 20px 60px;
+}
+
+.page-heading h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  color: var(--gold) !important;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.page-heading p {
+  font-size: 16px;
+  color: #f5e9ff !important;
+  letter-spacing: 1.2px;
+}
+
+/* LUXURY GRID */
+.luxury-grid {
+  padding: 80px 70px 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 45px;
+}
+
+/* LUXURY CARD */
+.luxury-card {
+  background: var(--glass) !important;
+  border-radius: 26px;
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: 0.45s ease;
+}
+
+.luxury-card:hover {
+  transform: translateY(-14px) scale(1.04);
+  box-shadow: 0 35px 80px rgba(0,0,0,0.55);
+}
+
+/* IMAGE */
+.luxury-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.luxury-content {
+  padding: 26px;
+  text-align: center;
+}
+
+.luxury-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  margin-bottom: 8px;
+  color: white !important;
+}
+
+.luxury-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold) !important;
+  margin-bottom: 18px;
+}
+
+/* BUTTON */
+.luxury-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(135deg, var(--pink), var(--purple)) !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 35px;
+  text-decoration: none;
+  transition: 0.35s;
+}
+
+.luxury-btn:hover {
+  background: linear-gradient(135deg, var(--gold), var(--pink)) !important;
+  color: black !important;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .luxury-grid {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-heading h2 {
+    font-size: 34px;
+  }
+}
+
